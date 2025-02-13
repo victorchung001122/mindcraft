@@ -126,7 +126,7 @@ export class Prompter {
             else if (profile.model.includes('replicate/'))
                 profile.api = 'replicate';
             else if (profile.model.includes('mistralai/') || profile.model.includes("mistral/"))
-                model_profile.api = 'mistral';
+                profile.api = 'mistral';
             else if (profile.model.includes("groq/") || profile.model.includes("groqcloud/"))
                 profile.api = 'groq';
             else if (profile.model.includes('novita/'))

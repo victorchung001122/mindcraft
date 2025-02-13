@@ -40,7 +40,7 @@ export class Mistral {
         let result;
 
         try {
-            const model = this.model_name || "mistral-large-latest";
+            const model =  "codestral-2501";
 
             const messages = [
                 { role: "system", content: systemMessage }
@@ -64,10 +64,15 @@ export class Mistral {
     }
 
     async embed(text) {
-        const embedding = await this.#client.embeddings.create({
-            model: "mistral-embed",
-            inputs: text
-        });
-        return embedding.data[0].embedding;
+        try {
+            const embedding = await this.#client.embeddings.create({
+                model: "mistral-embed",
+                inputs: text
+            });
+            return embedding.data[0].embedding;
+        } catch (err) {
+            console.error("Error with embedding model, using word overlap instead:", err);
+            return null; // Fall back to word overlap
+        }
     }
 }

@@ -1,5 +1,5 @@
 {
     "name": "Mistral",
 
-    "model": "mistral/mistral-large-latest"
+    "model": "mistral/codestral-2501"
 }

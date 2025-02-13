@@ -1,6 +1,5 @@
 {
-    "name": "andy",
+    "name": "mistral",
 
-    "model": "gpt-4o-mini"
-
+    "model": "mistral/codestral-2501"
 }

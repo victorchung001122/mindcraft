@@ -8,7 +8,7 @@ export default
     // the mindserver manages all agents and hosts the UI
     "host_mindserver": true, // if true, the mindserver will be hosted on this machine. otherwise, specify a public IP address
     "mindserver_host": "localhost",
-    "mindserver_port": 8080,
+    "mindserver_port": 8081,
     
     // the base profile is shared by all bots for default prompts/examples/modes
     "base_profile": "./profiles/defaults/survival.json", // also see creative.json, god_mode.json
